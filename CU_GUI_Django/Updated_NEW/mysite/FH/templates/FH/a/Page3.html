@@ -1,0 +1,95 @@
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>
+Python button script
+</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+    <label for="cars"><font size="+2">DL Frequency</font></label>
+    <input type="text" id="fname" name="name" placeholder="3.65" ><br><br>
+    <button type="submit" >Submit</button>
+</form>
+<h1>{{data}}</h1>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>
+Python button script
+</title>
+</head>
+<body>
+<button onclick="location.href='{% url 'script' %}'">Execute Script</button> <hr>
+{% if data %}
+{{data | safe}}
+{% endif %}
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Python button script
+</title>
+<script type="text/javascript">  
+    function selects(){  
+        var ele=document.getElementsByName('chk');  
+        for(var i=0; i<ele.length; i++){  
+            if(ele[i].type=='checkbox')  
+                ele[i].checked=true;  
+        }  
+    }  
+    function deSelect(){  
+        var ele=document.getElementsByName('chk');  
+        for(var i=0; i<ele.length; i++){  
+            if(ele[i].type=='checkbox')  
+                ele[i].checked=false;  
+              
+        }  
+    }             
+</script> 
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+    <label for="cars"><font size="+2">DL Frequency</font></label>
+    <input type="text" id="fname" name="name1" placeholder="3.65" ><br><br>
+    <label for="cars"><font size="+2">eAxID</font></label>
+    <div class="checkboxes">
+        <span> 
+          <input type="checkbox" name="chk" value="1" style="width:60px;height:15px;"><label>1</label>
+                <input type="checkbox" name="chk" value="2"style="width:60px;height:15px;"> <label>2</label>
+                <input type="checkbox" name="chk" value="3"style="width:60px;height:15px;"> <label>3</label>
+                <input type="checkbox" name="chk" value="4"style="width:30px;height:15px;"> <label>4</label>
+                <input type="button" onclick='selects()' style="width:90px;height:20px;"value="   Select All  "/>   
+                <input type="button" onclick='deSelect()' style="width:90px;height:20px;" value=" Deselect All "/>
+        </span>
+        </div>
+
+        <label for="cars"><font size="+2">Duplex Type</font></label>
+                    <br><br>
+                    <select name="cars" id="cars">
+                        <option value="volvo">TDD</option>
+                        <option value="saab">FDD</option>
+                        
+                
+                </select>
+    <button onclick="location.href='{% url 'script' %}'">Execute Script</button> <hr>
+<!-- {% if data %}
+{{data | safe}}
+{% endif %} -->
+</form>
+<h1>{{data}}</h1>
+<h1>{{data1}}</h1>
+</body>
+</html>

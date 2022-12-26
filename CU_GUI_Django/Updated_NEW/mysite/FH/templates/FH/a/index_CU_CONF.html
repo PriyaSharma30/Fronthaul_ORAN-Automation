@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <!-- For dropdown button -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- For submit button -->
+  <meta name="viewport" content="width=device-width, initialscale=1.0">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <meta charset="UTF-8">
+    <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+    <link rel="stylesheet" href='{% static "FH/style2.css" %}'>
+    <!-- <link rel="stylesheet" href="style1.css"> -->
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  {% load static %}
+  <form method="post">
+    {% csrf_token %}
+    
+  <div class="sidebar">
+    <div class="logo-details">
+      <!-- <i class='bx bxl-c-plus-plus1'></i> --> 
+      <i class='bx bx-station'></i>
+      <span class="logo_name">RCT</span>
+    </div>
+      <ul class="nav-links">
+        <br>
+            <button class="dropdown-btn">
+                <a href="/" style="color:white; text-decoration: none">Configuration</a> 
+            </button>
+          </a>
+        </li>    
+        <br>
+        <button class="dropdown-btn" data-bs-toggle="dropdown">Transmitter
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <br>
+                <a href="/about" style="color:white; text-decoration: none">BS output power</a><br>
+                <a href="/extended" style="color:white; text-decoration: none">Dynamic range</a>
+                <a href="/extended" style="color:white; text-decoration: none">Transmitter ON/OFF </a>
+                <a href="/extended" style="color:white; text-decoration: none">Transmitter period</a>
+                <a href="/extended" style="color:white; text-decoration: none">Frequency error</a>
+                <a href="/about" style="color:white; text-decoration: none">Error magnitude</a>
+                <a href="/extended" style="color:white; text-decoration: none">Time alignment</a>
+                <a href="/extended" style="color:white; text-decoration: none">Occupied B </a><br>
+                <a href="/extended" style="color:white; text-decoration: none">ACLR</a><br>
+                <a href="/extended" style="color:white; text-decoration: none">OBUE </a><br>
+                <a href="/extended" style="color:white; text-decoration: none">TSE</a><br>
+                <a href="/extended" style="color:white; text-decoration: none">Co-location BS</a><br>
+                <a href="/extended" style="color:white; text-decoration: none">Co-existence FB</a><br>
+                <a href="/extended" style="color:white; text-decoration: none">Transmitter interM</a>  
+          </div>
+          
+          <br>
+        <button class="dropdown-btn" data-bs-toggle="dropdown">Receiver
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container"><br>
+                <a href="/extended" style="color:white; text-decoration: none">RX Ref sensitivity</a>
+                <a href="/extended" style="color:white; text-decoration: none">Dynamic range</a><br>
+                <a href="/extended" style="color:white; text-decoration: none">ACS</a><br>
+                <a href="/extended" style="color:white; text-decoration: none">General blocking</a><br>
+                <a href="/extended" style="color:white; text-decoration: none">Narrow BB </a><br>
+                <a href="/about" style="color:white; text-decoration: none">Out of BB</a><br>
+                <a href="/extended" style="color:white; text-decoration: none">Co Location </a><br>
+                <a href="/extended" style="color:white; text-decoration: none">RX intermodulation</a><br>
+                <a href="/extended" style="color:white; text-decoration: none">NB Intermodulation</a><br>
+                <a href="/extended" style="color:white; text-decoration: none">ICS</a>
+                       
+        
+      </ul>
+  </div>
+  
+  <section class="home-section">
+    <nav>
+        <span class ="dashboard"><h3><b>Configuration</b></h3></span>
+      <div class="profile-details"> 
+        <img src = '{% static "FH/logo_back.jpg" %}' alt="">
+      </div>  
+      
+    </nav>
+
+
+
+    <div class="home-content"></div>
+        <div class="middlediv">
+            <span>
+                    <label for="cars"><font size="+2">Test Model</font></label>
+            <br><br>
+                    <label for="cars"><font size="+2">SubCarrier Spacing</font></label>
+            <br><br>
+                    <label for="cars"><font size="+2">Duplex Type</font></label>
+                    <br><br>
+              <label for="cars"><font size="+2">Downlink Frequency</font></label>
+              <br><br>
+              <label for="cars"><font size="+2">Uplink Frequency</font></label>
+              <br><br>
+              <label for="cars"><font size="+2">Power</font></label>
+              <br><br>
+            <label for="cars"><font size="+2">Bandwidths</font></label>
+            <br><br>
+                <label for="cars"><font size="+2">Phase Compensation</font></label>
+                <br><br>
+                <label for="cars"><font size="+2">VXT Address</font></label>
+                <br><br>
+                <span> 
+                  <label for="cars"><font size="+2">eAxID</font></label>
+                  <br><br><br>
+                  <label for="cars"><font size="+2">Save results</font></label>
+                  <br><br> 
+                  <label for="cars"><font size="+2"><b>Downlink Timing</b></font></label>
+                  <br><br>
+                  <label for="cars"><font size="+2">DL C-Plane Time</font></label>
+                  <br><br>
+                  <label for="cars"><font size="+2">DL U-Plane Time</font></label>
+                  <br><br>
+                </span>
+
+        </div>
+        
+      <div class="rightdiv">
+      <span>
+          <select name="test_m" id="cars"  >
+          <option value="TM1_1">TM1_1</option>
+          <option value="TM2">TM2</option>
+          <option value="TM2a">TM2a</option>
+          <option value="TM3_1">TM3_1</option>
+          <option value="TM3_1a">TM3_1a</option>
+          <option value="TM3_2">TM3_2</option>
+          <option value="TM3_1">TM3_3</option>
+          </select>
+  <br>   <br>     
+          <select name="sub_c" id="cars">
+          <option value="15KHz">15KHz</option>
+          <option value="30KHz">30KHz</option>
+          <option value="60KHz">60KHz</option> 
+  </select>
+  <br><br><br>
+          
+          <select name="du_t" id="cars">
+          <option value="TDD">TDD</option>
+          <option value="FDD">FDD</option>
+          
+  
+  </select>
+  <br><br>
+
+    <input type="text" id="fname" name="name1" placeholder="3.65" ><br><br>
+    <input type="text" id="lname" name="name2"placeholder="3.65" ><br><br>
+    
+    <input type="text" id="lname" name="name3"placeholder="-60" ><br>
+    <br>
+  </form>
+
+  <select name="band_w" id="cars" >
+  <option value="10M">10M</option>  
+  <option value="20M">20M</option>
+  <option value="40M">40M</option>
+  <option value="80M">80M</option>
+  <option value="100M">100M</option>
+  
+  </select>
+<br><br><br>
+
+      <select name="Ph_a" id="cars"  >
+      <option value="Off">Off</option>
+      <option value="Auto">Auto</option>
+
+      </select>
+<br><br>
+      <input type="text" id="fname" name="name4" placeholder="172.20.56.35" >
+   
+    <div class="checkboxes">
+      <span> 
+        <input type="checkbox" name="chk" value="1" style="width:60px;height:15px;"><label>1</label>
+              <input type="checkbox" name="chk" value="2"style="width:60px;height:15px;"> <label>2</label>
+              <input type="checkbox" name="chk" value="3"style="width:60px;height:15px;"> <label>3</label>
+              <input type="checkbox" name="chk" value="4"style="width:30px;height:15px;"> <label>40</label>
+              <input type="button" onclick='selects()' style="width:90px;height: 25px;" value=" Select All"/>     
+              <input type="button" onclick='deSelect()' style="width:100px;height:25px;" value="Deselect All "/>
+      </span>
+      </div>
+      <br>
+    </div> 
+    <input type="text" id="fname" name="name5" value="C:\ORAN_AUTOMATION\Result" readonly >
+    <br><br><br><br>  <br>
+    <input type="text" id="fname" name="name6" placeholder="425000" >
+    <br><br>
+    <input type="text" id="fname" name="name7" placeholder="325000" >
+    <br><br><br>
+
+    
+</form>
+  <div class="container">
+    <div class="center">
+        <button id="submitForm" a href="/home" style="background-color:green;color:black;width:150px;height:50px;" >Submit</button> <hr></a>
+        <script>
+          $("#submitForm").click(function() {
+             alert("The Form has been Submitted.");
+          });
+         </script>
+        
+    </div>
+  </div>
+  </form> 
+  </form>
+</span>
+</div> 
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+      </script>
+
+    <script type="text/javascript">  
+      function selects(){  
+          var ele=document.getElementsByName('chk');  
+          // for(var i=0; i<ele.length; i++){  
+          //     if(ele[i].type=='checkbox')  
+          //         ele[i].checked=true;
+          let value = ''
+          for(var i=0; i<ele.length; i++){  
+              if(ele[i].type=='checkbox')  
+                  ele[i].checked=true; 
+                  val = i+1
+                  value=value+String(val)
+                  console.log(value)
+                   
+          }  
+      }  
+      function deSelect(){  
+          var ele=document.getElementsByName('chk');  
+          for(var i=0; i<ele.length; i++){  
+              if(ele[i].type=='checkbox')  
+                  ele[i].checked=false;  
+                
+          }  
+      } 
+      function submit(){  
+          var ele=document.getElementsByName('chk');  
+          // for(var i=0; i<ele.length; i++){  
+          //     if(ele[i].type=='checkbox')  
+          //         ele[i].checked=true;
+          let value = ''
+          for(var i=0; i<ele.length; i++){  
+              if(ele[i].type=='checkbox' && ele[i].checked==true)   
+                  val = i+1
+                  value=value+String(val)
+                  console.log(value)
+                   
+          }  
+      }             
+</script> 
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+
+
+      
+
+
+ </script>
+   
+              
+    </script>
+    <style type=text/css>
+        /* .leftdiv
+        {
+        float: left;
+        } */
+        .middlediv
+        {
+        float: left;
+        background-color:white;
+        width: 30%;
+        height: 60%;
+        }
+        .rightdiv
+        {
+        float: left;
+        background-color:white;
+        width: 70%;
+        height: 50%;
+        }
+        div{
+        padding : 0%;
+        color: black;
+        background-color: 009900;
+        /* width: 30%;
+        height: 80%; */
+        border: solid white;
+        }
+     </style>
+
+
+
+
+
+
+
+    <style> 
+        .checkboxes label{
+  margin: 50px 50px 5px 5px;
+}
+
+.checkboxes select {
+  margin: 0px 0px 0px 100px;
+} 
+/* .checkboxes select {
+    width: 300px;
+} */
+
+p  
+            {  
+            text-indent:7em;  
+            }  
+            .tab1 {   
+                        tab-size: 15;   
+                    } 
+                    
+                    
+.checkboxes input {
+  margin: 0px 0px 0px 0px;
+}
+  
+
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+select{
+  width:250px;
+  height: 30px;
+
+} 
+
+input{
+  width: 250px;
+  height: 30px;
+
+}
+/* .checkboxes input {
+    width:15px;
+  height: 30px;
+} */
+
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn ,.dropdown-container{
+  /* padding: 6px 8px 6px 16px; */
+  text-decoration: white;
+  font-size: 20px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  /* color: yellow; */
+}
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+* .main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  /* padding: 0px 10px; */
+} */
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  /* color: white; */
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #0A2558;
+  /* padding-left: 0px; */
+}
+
+
+
+     </style>  
+
+
+</body>
+</html>
+
+

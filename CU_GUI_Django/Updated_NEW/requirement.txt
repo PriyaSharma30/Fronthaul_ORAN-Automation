@@ -1,0 +1,18 @@
+[DEFAULT]
+test model = 
+number of bandwidths to test = 1
+subcarrier spacing = 
+duplex type = 
+downlink center frequency in ghz = 
+uplink center frequency in ghz = 
+power in dbm = 
+bandwidths (split with '/') = 
+phase compensation = 
+vxt address = TCPIP::::hislip::INSTR
+eaxid = 
+folder path to save results = 
+dl c-plane time = 
+dl u-plane time = 
+cyclic prefix = 
+external gain = 
+

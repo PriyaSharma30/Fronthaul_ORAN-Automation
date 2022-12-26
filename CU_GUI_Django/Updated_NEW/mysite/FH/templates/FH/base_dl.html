@@ -1,0 +1,362 @@
+{% include "header.html" %}
+{% load static %}
+  <section class="home-section">
+    <nav>
+      
+        <span class ="dashboard"><h3><b>TX BS output power</b></h3></span>
+      
+      <div class="profile-details"> 
+        <img src = '{% static "FH/logo_back.jpg" %}' alt="">
+       
+      </div>  
+      
+    </nav>
+
+    <div class="top_div">
+
+    <div class="home-content"></div>
+    
+        
+                    <label for="cars"><font size="+2">Base</font></label>
+                   
+
+        
+        
+  <span1>
+       
+    <input type="text" id="fname" name="name1" value="PN9" readonly style=width:255px;height:30px>
+  </span1>
+</form>
+<!-- <div class="container"> -->
+    <div class="center">
+
+      
+      <form action="external" method="post">
+              {% csrf_token %}   
+              <!-- Input Text:
+              <input type ="text" name ="param" required> <br> -->
+              
+              <br>
+              <br>
+
+              <input type="submit" value="Execute external python script"style="background-color:green;color:black;width:270px;height:50px;">
+      </form>
+
+      
+
+         
+    
+  </form> 
+</div>
+</div>
+</div>
+</div>
+
+<!-- <div class="bottom_div"> -->
+ 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div class="bottom_div" style="height:500%;">
+    <label for="cars"><font size="+2"><b>Output</b></font> 
+        <br>  
+        <!-- {{data_external}} -->
+        {{data10|linebreaksbr }}  
+
+</div>
+
+
+
+
+
+    
+
+    
+
+
+
+
+    
+
+
+
+
+    <script>
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+      </script>
+
+       
+</script> 
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+
+
+      
+
+
+ </script>
+   
+              
+    </script>
+    <style type=text/css>
+        /* .leftdiv
+        {
+        float: left;
+        } */
+        .overview-boxes
+        {
+            width: 100%;
+        height: 100%;
+        /* top: 50%; */
+        margin: 0;
+        position: absolute;
+        top: 40%;
+        left:0%;
+        /* background-color: lightgray; */
+        
+        }
+        
+        
+        div{
+        padding : 0%;
+        color: black;
+        background-color: 009900;
+        /* width: 30%;
+        height: 80%; */
+        border: solid white;
+        }
+     </style>
+
+
+
+
+
+
+
+    <style> 
+
+      
+        .checkboxes label{
+  margin: 50px 50px 5px 5px;
+}
+
+.checkboxes select {
+  margin: 0px 0px 0px 100px;
+} 
+/* .checkboxes select {
+    width: 300px;
+} */
+
+p  
+            {  
+            text-indent:7em;  
+            }  
+            .tab1 {   
+                        tab-size: 15;   
+                    } 
+                    
+                    
+/* .checkboxes input {
+  margin: 0px 0px 0px 0px;
+} */
+  
+
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 70%;
+  left: 42%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+}
+
+select{
+  width:90px;
+  height: 30px;
+
+} 
+
+input{
+  width: 90px;
+  height: 30px;
+
+}
+/* .checkboxes input {
+    width:15px;
+  height: 30px;
+} */
+
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* body {
+  top: 35%;
+  left: 20%;
+  position: fixed;
+} */
+
+
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+
+/* .fa-caret-down {
+  float: left;
+  padding-right: 40px;
+} */
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn ,.dropdown-container{
+  /* padding: 6px 8px 6px 16px; */
+  text-decoration: white;
+  font-size: 20px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  /* color: yellow; */
+}
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+* .main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  /* padding: 0px 10px; */
+} */
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  /* color: white; */
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #0A2558;
+  /* padding-left: 0px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+label {
+          float: left;
+           
+        }
+          
+span1 {
+    display: block;
+    /* overflow: hidden; */
+    padding: 0px 20px 0px 80px;
+    margin-left: 120px;
+    
+}
+  
+input {
+    /* width: 10%; */
+    padding: 0px;
+    margin-left: 10px;
+    
+    top: 40;
+    width: 60%;
+}
+
+
+
+        .top_div {
+                
+                /* position: relative; */
+                height: 300px;
+                width: 100%; 
+                /* height: 500px;
+                width: 100%; */
+                background-color: white;
+                position: fixed;
+        }
+        .bottom_div {
+                /* position: absolute;
+                bottom: 0px; */
+                /* top: 1500px; */
+                background-color:white;
+                /* height: 100px; */
+                /* width: 100%; */
+                /* height: 50%; */
+                /* top: 100px;
+                
+                height: 1000px;
+                bottom: 500px;  */
+                /* bottom: 200px; */
+                /* width: 200%;  */
+        }
+
+
+            a:link {
+                color: Red;
+                /* background-color: transparent;
+                text-decoration: none; */
+              }
+            a:hover {
+              color: Black;
+            }
+            </style>  
+
+
+</body>
+</html>
